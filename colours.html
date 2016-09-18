@@ -11,9 +11,48 @@ h1 {
 }
 </style>
 
+<script>
+
+function updateColour(r, g, b)
+{
+	// TODO(PMM) need range checking on the input strings
+	var colourString = "#" + r + g + b;
+	document.getElementById("colourDiv").style["background-color"] = colourString;
+}
+
+function coloursChanged()
+{
+	updateColour(coloursForm.r.value,
+			     coloursForm.g.value,
+			     coloursForm.b.value);
+
+   //window.document.getElementById("colourDiv").style.background-color = "#808080";
+}
+
+</script>
+
+
 </head>
+
 <body>
 
 <h1>This is Yuuuuge!</h1>
+
+<h2>Enter some colour values</h2>
+
+<form name="coloursForm">
+<input name="r" value="80" maxlength=2 onchange="coloursChanged()" />
+<input name="g" value="80" maxlength=2 onchange="coloursChanged()" />
+<input name="b" value="80" maxlength=2 onchange="coloursChanged()" />
+</form>
+
+<div id="colourDiv" style="width: 300px; height:  200px; background-color: #c0c0c0">
+Here is some default text
+<div>
+
+<script>
+//     coloursChanged();
+</script>
+
 </body>
 </html>
