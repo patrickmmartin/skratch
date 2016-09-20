@@ -18,7 +18,6 @@ function printExpressions(jwtManager)
 
  console.log(jwtManager._token, jwtManager._public);
  console.log("======");
- console.log((!jwtManager.getToken() || jwtManager.isPublicUser()));
  console.log(!(!jwtManager.getToken() || jwtManager.isPublicUser()));
  console.log(jwtManager.getToken() && !jwtManager.isPublicUser());
 
