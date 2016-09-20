@@ -29,9 +29,9 @@ function expressions()
 
   var jwtManager = {
     _token : false,
-    function getToken() { return this._token; },
     _public : false,
-    function isPublicUser() { return this._public; }
+    getToken(): function () { return this._token; },
+    isPublicUser() : function() { return this._public; }
   };
 
 
