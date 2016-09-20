@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- in -line style -->
+
+<style>
+
+h1 {
+  font-family: sans-serif;
+}
+</style>
+
+<script>
+
+function printExpressions(jwtManager, )
+{
+
+ console.log(jwtManager._token, jwtManager._public);
+ console.log("======");
+ console.log((!jwtManager.getToken() || jwtManager.isPublicUser()));
+ console.log(!(!jwtManager.getToken() || jwtManager.isPublicUser()));
+ console.log(jwtManager.getToken() && !jwtManager.isPublicUser()));
+
+}
+
+function expressions()
+{
+
+  var jwtManager = {
+    _token = false;
+    function getToken() { return _token; }
+    _public = false;
+    function isPublicUser() { return _public; }
+  };
+
+
+  jwtManager._token = false; jwtManager._public = false;
+  jwtManager._token = false; jwtManager._public = true;
+  jwtManager._token = true; jwtManager._public = false;
+  jwtManager._token = true; jwtManager._public = true;
+
+
+}
+
+</script>
+
+
+</head>
+
+<body>
+
+<h1>This is Yuuuuge!</h1>
+
+<h2>Enter some colour values</h2>
+
+<form name="coloursForm">
+<input name="r" value="80" maxlength=2 onchange="coloursChanged()" />
+<input name="g" value="80" maxlength=2 onchange="coloursChanged()" />
+<input name="b" value="80" maxlength=2 onchange="coloursChanged()" />
+</form>
+
+<div id="colourDiv" style="width: 300px; height:  200px; background-color: #c0c0c0">
+Here is some default text
+<div>
+
+<script>
+     expressions();
+</script>
+
+</body>
+</html>
