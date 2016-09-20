@@ -43,9 +43,13 @@ function expressions()
   var jwtManager = new JwtManager();
 
   jwtManager._token = false; jwtManager._public = false;
+  printExpressions(jwtManager);
   jwtManager._token = false; jwtManager._public = true;
+  printExpressions(jwtManager);
   jwtManager._token = true; jwtManager._public = false;
+  printExpressions(jwtManager);
   jwtManager._token = true; jwtManager._public = true;
+  printExpressions(jwtManager);
 
 
 }
