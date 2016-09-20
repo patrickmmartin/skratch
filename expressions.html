@@ -24,14 +24,22 @@ function printExpressions(jwtManager)
 
 }
 
+
+class JwtManager {
+  constructor() {
+    this._token : false,
+    this._public : false,
+  }
+  
+  getToken() { return this._token; },
+  isPublicUser() { return this._public; }
+  
+}
+
 function expressions()
 {
 
   var jwtManager = {
-    _token : false,
-    _public : false,
-    getToken(): function () { return this._token; },
-    isPublicUser() : function() { return this._public; }
   };
 
 
