@@ -13,7 +13,7 @@ h1 {
 
 <script>
 
-function printExpressions(jwtManager, )
+function printExpressions(jwtManager)
 {
 
  console.log(jwtManager._token, jwtManager._public);
@@ -51,18 +51,6 @@ function expressions()
 <body>
 
 <h1>This is Yuuuuge!</h1>
-
-<h2>Enter some colour values</h2>
-
-<form name="coloursForm">
-<input name="r" value="80" maxlength=2 onchange="coloursChanged()" />
-<input name="g" value="80" maxlength=2 onchange="coloursChanged()" />
-<input name="b" value="80" maxlength=2 onchange="coloursChanged()" />
-</form>
-
-<div id="colourDiv" style="width: 300px; height:  200px; background-color: #c0c0c0">
-Here is some default text
-<div>
 
 <script>
      expressions();
